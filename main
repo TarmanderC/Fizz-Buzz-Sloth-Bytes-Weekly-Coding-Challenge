@@ -1,0 +1,39 @@
+/**
+ * Just a coding challenge
+ *
+ * @Tarmander / Louie
+ * @June 6, 2024
+ */
+
+import java.util.*;
+public class FizzBuzz
+{
+    private static Scanner keyboard = new Scanner(System.in);
+    
+    private static int n;
+    
+    public static void main(String[] args) {
+        n = keyboard.nextInt();
+        
+        String[] answer = new String[n];
+        
+        for(int i = 0; i < n; i++) {
+            int num = i + 1;
+            if((num % 3) == 0) {
+                if((num % 5) == 0) {
+                    answer[i] = "FizzBuzz";
+                } else {
+                    answer[i] = "Fizz";
+                }
+            } else {
+                if((num % 5) == 0) {
+                    answer[i] = "Buzz";
+                } else {
+                    answer[i] = "" + num;
+                }
+            }
+        }
+        
+        System.out.println(Arrays.toString(answer));
+    }
+}
